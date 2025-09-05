@@ -1,0 +1,54 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    scroll-behavior: smooth;
+}
+.HopeHeading{
+    font-size: 50px;
+}
+
+.HopeHeadingpara{
+    font-size: 20px;
+}
+.hopeCard {
+    background: #f8f8f8;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.hopeCard:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+.cardHead{
+    font-size: 23px;
+}
+.cardHeadpara{
+    font-size: 15px;
+}
+
+.social a{
+    margin: 0 10px;
+    color: #ffffff;
+    font-size: 1.2rem;
+    text-align:center;
+    align-items: center;
+    gap: 50px;
+}
+.card img {
+    width: 60px;
+    margin-bottom: 15px;
+    cursor: pointer;
+}
+
+.btn{
+    background-color: #ff6b6b;
+}
+
+.btn:hover {
+    background: #ff4040;
+}
