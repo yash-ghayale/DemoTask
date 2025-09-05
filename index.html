@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Hope for All</title>
+        <link rel="shortcut icon" type="image/x-icon" href="Images/favicon.ico">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+                font-family: "Poppins", sans-serif;
+                scroll-behavior: smooth;
+            }
+
+            body {
+                line-height: 1.6;
+                color: #333;
+            }
+
+            header {
+                background: url("https://via.placeholder.com/1920x800") no-repeat center center/cover;
+                height: 100vh;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+                color: #fff;
+                position: relative;
+            }
+
+            header::after {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: rgba(0, 0, 0, 0.5);
+                z-index: 0;
+            }
+
+            header h1,
+            header p,
+            header a {
+                position: relative;
+                z-index: 1;
+            }
+
+            header h1 {
+                font-size: 3rem;
+                margin-bottom: 10px;
+            }
+
+            header p {
+                font-size: 1.2rem;
+                margin-bottom: 20px;
+            }
+
+            .btn {
+                display: inline-block;
+                padding: 10px 25px;
+                background: #ff6b6b;
+                color: #fff;
+                text-decoration: none;
+                border-radius: 5px;
+            }
+
+            .btn:hover {
+                background: #ff4040;
+            }
+
+            section {
+                padding: 45px 20px;
+                max-width: 1100px;
+                margin: auto;
+            }
+
+            section h2 {
+                text-align: center;
+                margin-bottom: 20px;
+                font-size: 2rem;
+                color: #222;
+            }
+
+            #about {
+                display: flex;
+                /* flex-wrap: wrap; */
+                align-items: center;
+                gap: 20px;
+            }
+
+            #about img {
+                width: 15%;
+                height: 20%;
+                border-radius: 10px;
+            }
+
+            #about div {
+                flex: 1 1 300px;
+            }
+
+            #work .cards {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+                gap: 20px;
+                margin-top: 30px;
+            }
+
+            .card {
+                background: #f8f8f8;
+                padding: 20px;
+                border-radius: 10px;
+                text-align: center;
+                transition: transform 0.3s, box-shadow 0.3s;
+            }
+
+            .card:hover {
+                transform: translateY(-5px);
+                box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            }
+
+            .card img {
+                width: 60px;
+                margin-bottom: 15px;
+                cursor: pointer;
+            }
+
+            #donate form {
+                display: grid;
+                gap: 15px;
+                max-width: 500px;
+                margin: auto;
+            }
+
+            form input,
+            form select,
+            form button {
+                padding: 10px;
+                border: 1px solid #ddd;
+                border-radius: 5px;
+                width: 100%;
+                font-size: 1rem;
+            }
+
+            form button {
+                background: #ff6b6b;
+                color: #fff;
+                border: none;
+                cursor: pointer;
+            }
+
+            form button:hover {
+                background: #ff4040;
+            }
+
+            footer {
+                background: #222;
+                color: #ddd;
+                text-align: center;
+                padding: 20px;
+            }
+
+            footer .social a {
+                margin: 0 10px;
+                color: #ffffff;
+                font-size: 1.2rem;
+            }
+
+            @media (max-width: 600px) {
+                header h1 {
+                    font-size: 2.2rem;
+                }
+                #about {
+                    flex-direction: column;
+                    text-align: center;
+                }
+                #about .AboutUsH2 {
+                    margin-left: 20%;
+                }
+            }
+
+            #about .AboutUsH2 {
+                margin-right: 20%
+            }
+
+        </style>
+    </head>
+    <body>
+        <header id="hero">
+            <h1>Hope for All</h1>
+            <p>Empowering Lives Through Education and Support</p>
+            <a href="#donate" class="btn">Donate Now</a>
+        </header>
+
+        <section id="about">
+            <img src="Images/community.png" alt="Community Work"/>
+            <div>
+                <h2 class="AboutUsH2">About Us</h2>
+                <p> “Our NGO is dedicated to improving the lives of underserved communities by providing access to education, healthcare, and sustainable development programs. We partner with local leaders and organizations to empower individuals, promote equity, and build long-term resilience.”</p>
+            </div>
+        </section>
+
+        <section id="work">
+            <h2>Our Work</h2>
+            <div class="cards">
+                <div class="card">
+                    <img src="Images/education.png" alt="Education"/>
+                    <h3>Child Education</h3>
+                    <p>Providing access to quality education for underprivileged children.</p>
+                </div>
+                <div class="card">
+                    <img src="Images/empowerment.png" alt="Women" />
+                    <h3>Women Empowerment</h3>
+                    <p>Helping women gain confidence, independence, and leadership roles.</p>
+                </div>
+                <div class="card">
+                    <img src="Images/skill.png" alt="Skill Training"/>
+                    <h3>Skill Training</h3>
+                    <p>Equipping individuals with skills to build sustainable livelihoods.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="donate">
+            <h2>Get Involved</h2>
+            <p style="text-align: center; margin-bottom: 20px">Call-to-action encouraging people to volunteer or donate</p>
+            <form>
+                <div class="form-control">
+                    <input type="number" placeholder="Amount" required />
+                </div>
+                <div class="form-control">
+                    <input type="text" placeholder="Name" required oninput="this.value=this.value.replace(/[^a-zA-Z\s]/g, '')"/>
+                </div>
+                <div class="form-control">
+                    <input type="email" placeholder="Email" required />
+                </div>
+                <div class="form-control">
+                    <select required>
+                        <option value="">Select an option</option>
+                        <option value="Volunteer">Volunteer</option>
+                        <option value="Donate">Donate</option>
+                    </select>
+                </div>
+                <button type="submit">Submit</button>
+            </form>
+        </section>
+        <footer>
+            <p><strong>Our Focus:</strong> Education • Empowerment</p>
+            <p>Contact: hopeforall@gmail.com | +91 9999999999</p>
+            <div class="social">
+                <a href="#"><i class="fa fa-facebook-official" aria-hidden="true"></i></a>
+                <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                <a href="#"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a>
+            </div>
+            <p>&copy; 2025 Hope for All. All rights reserved.</p>
+        </footer>
+    </body>
+</html>
